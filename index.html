@@ -66,10 +66,48 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-<body>
+<body> <!-- Codes for the actual website (body of the website). -->
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+
+<div id="header" class="w3-container w3-flat-carrot"> <!-- The first division of the website where the first header will be shown.-->
+	<h1>Cold or Allergies?</h1>
+	<!-- h1 meand header 1, which displays the name of the page. -->
+</div>
+	<!-- div divides the page into sections. Used t=for clarity and organizaiton in the webpage. -->
+<div id="content" class="w3-container">
+	<!-- div for this codes for the dvision of the website where the first header will be shown.-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<!-- First button of the code to take you to the questions. -->
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+<!-- Text that whos up in the first page/ also what shows up as soon as the wbesite loads. -->
+	
+<div class="page" id="one">
+	<!-- First page, hence the id = one because it is the first question. -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+		<!-- Header will display the title Question 1 at the top of the page. -->
+	</div>
+	<!-- First division of the page. -->
+    	<div id="content" class="w3-container">
+		<!-- Division for the button to show up ion the website. -->
+		<div id="content" class="w3-container">
+	<p>Are your eyes watery or itchy?</p>  
+			<!-- First quesiton text that will show up on the webpage. -->
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			<!-- Code for buttons yes or no with the onclick meaning where the click will count towards, wither if the person has allergies or a cold for this quesiton by answering yes or no. -->
+ </div><!-- /content -->
+
+	</p>  <!-- End of the page with </p>. -->
+		
+    	</div>
+</div>
+<!-- End of first page after the person clicks the buttons Yes or No. -->
 	
 </body>
 </html>
