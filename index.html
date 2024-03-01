@@ -52,9 +52,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
         function calculateResults() { //function calculateResults created to have somethign to calculate the percentages of allerguies and cold and the totals all together.
-            var total = allergy_count + cold_count; //var total counts the total points for both allergy and cold.
-            var depressionPercent = (cold_count / total) * 100; // var depressionPercent calculates the percent of the depression answers out of the total answers. 
-            var anxietyPercent = (allergy_count / total) * 100; // var anxietyPercent calculates the percent of the anxiety answers out of the total answers.
+            var total = anxiety_count + depression_count; //var total counts the total points for both allergy and cold.
+            var depressionPercent = (depression_count / total) * 100; // var depressionPercent calculates the percent of the depression answers out of the total answers. 
+            var anxietyPercent = (anxiety_count / total) * 100; // var anxietyPercent calculates the percent of the anxiety answers out of the total answers.
             var resultText = document.getElementById("resultsText");
             resultText.innerHTML = "Probability it is anxiety = " + anxietyPercent.toFixed(2) + "%<br>" +
                                     "Probability it is a depression = " + depressionPercent.toFixed(2) + "%"; 
@@ -206,7 +206,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         </div>
 	<!-- First division of results page that will display "Results" because of h1(header) code. -->
         <div id="content" class="w3-container">
-	<button class="w3-butyton w3-black"  onclick="calculateResults()">Click Here to View Results</button>
+	<button class="w3-button w3-black"  onclick="calculateResults()">Click Here to View Results</button>
 	<p id="resultsText"></p>
             <!-- Results will be displayed here after the button is pressed. -->
         </div>
