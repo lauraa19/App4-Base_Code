@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-	<title>Hello World</title>  
+	<title>Anxiety or Depression</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
@@ -37,9 +37,33 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+	
 
 	//YOUR JAVASCRIPT GOES HERE
+   var anxiety_count = 0; //variable allergy_count counts how many answers are for allergy starting from 0.
+	var depression_count = 0; //variable cold_count counts how many answers are for cold starting from 0.
+        
+        function anxietyAdd() { //function anxietyAdd was added to add 1 count for each answer for allergy.
+            anxiety_count++; 
+        }
+        
+        function depressionAdd() { //function depressionAdd was added to add 1 count for each answer for cold.
+            depression_count++;
+        }
 
+        function calculateResults() { //function calculateResults created to have somethign to calculate the percentages of allerguies and cold and the totals all together.
+            var total = allergy_count + cold_count; //var total counts the total points for both allergy and cold.
+            var depressionPercent = (cold_count / total) * 100; // var depressionPercent calculates the percent of the depression answers out of the total answers. 
+            var anxietyPercent = (allergy_count / total) * 100; // var anxietyPercent calculates the percent of the anxiety answers out of the total answers.
+            var resultText = document.getElementById("resultsText");
+            resultText.innerHTML = "Probability it is anxiety = " + anxietyPercent.toFixed(2) + "%<br>" +
+                                    "Probability it is a depression = " + depressionPercent.toFixed(2) + "%"; 
+	window.onload = function() {
+    calculateResults();
+};
+        }
+
+	
 </script>	
 
 
